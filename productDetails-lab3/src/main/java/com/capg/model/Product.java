@@ -15,7 +15,7 @@ public class Product {
 	  @GeneratedValue
 	  private int productId;
 	  
-	  @Column(name="productname",length=15)
+	  @Column(name="productname")
 	  private String productName;
 	  
 	  @Column(name="productprice")

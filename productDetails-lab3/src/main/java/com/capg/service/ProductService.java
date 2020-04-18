@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.capg.model.Product;
-import com.capg.repo.ProductRepo;
+import com.capg.repo.ProductJpaRepo;
 @Service
 public class ProductService {
 	@Autowired
-	private  ProductRepo  productRepo;
+	private  ProductJpaRepo  productRepo;
 	
 	public List<Product> findAllProducts() {
 		 
@@ -19,7 +19,7 @@ public class ProductService {
 
 	public Product createProduct(Product product) {
 		
-		return productRepo.saveAndFlush(product);
+		return productRepo.save(product);
 	}
  
 }
